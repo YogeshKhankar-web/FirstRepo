@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/css/font-awesome-5.8.1.css">
+    <title>Document</title>
+    <style>
+      ol, ul 
+      {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      }
+      .top_ul 
+      {
+        padding: 10px 0px;
+        background: #f2f2f2;
+      }
+      .model_top-bar li .model_top-left {
+    float: left;
+    width: 25%;
+    padding-left: 18px;
+    }
+    .model_top-left span {
+    float: left;
+    font-size: 19px;
+    font-weight: 600;
+    padding-left: 0px;
+    margin-top: 16px;
+}
+.model_top-bar li .check-in-div {
+    float: left;
+    width: 73%;
+    margin-right: 0px;
+}
+.model_top-bar li .check-in-div span {
+    margin-right: 5px;
+    position: relative;
+    width: auto;
+    display: block;
+    float: right;
+}
+.model_top-bar li .check-in-div span title {
+    color: #666;
+    display: inline-block;
+    padding-left: 3px;
+}
+.model_top-bar li .check-in-div span.for-chek-in {
+    width: 22%;
+}
+.model_top-bar li .check-in-div span.for-check-out {
+    width: 22%;
+}
+.for_detail_model-box #room_list {
+    padding: 15px;
+}
+#room_list b {
+    padding: 6px 10px;
+    display: inline-block;
+    background-color: #9E9E9E;
+    width: 100%;
+    font-size: 18px;
+    color: #ffffff;
+    margin-top: 20px;
+}
+.for_detail_model-box #room_list hr {
+    display: none;
+}
+.model_list {
+    clear: both;
+    margin-top: 25px;
+    
+    padding: 10px;
+    position: relative;
+}
+li.hotel-head {
+    width: 183px;
+}
+.model_list li {
+    float: left;
+    display: block;
+   
+    vertical-align: top;
+    line-height: 15px;
+    padding-top: 0px;
+}
+.model_list li h3 {
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    color: #666666;
+    letter-spacing: 1px;
+}
+li.roomtype {
+  width: 162px;
+    color: #565454;
+    /* font-size: 16px; */
+    margin-top: -8px;
+    line-height: 0px;
+    margin-left: 35px;
+}
+.for_detail_model-box .form-control {
+    height: 32px;
+}
+li.c_policy {
+     width: 248px;
+    text-align: center;
+    color: #3a66f5;
+    font-weight: 600;
+    position: relative;
+}
+.model_list li span {
+    color: #f56961;
+    font-size: 15px;
+    letter-spacing: 0;
+    font-weight: 600;
+    cursor: pointer;
+}
+li.amount {
+    width: 210px;
+    color: #565454;
+    font-weight: 600;
+    font-size: 16px;
+    margin-left: 24px;
+}
+li.amount button {
+    background: #f56961;
+    color: #ffffff;
+    border: 1px solid #f56961;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: -8px;
+    margin-left: 0px;
+    float: right;
+    font-weight: bold;
+    outline: none;
+    border: 1px solid #f56961;
+    font-size: 12px;
+}
+.model_list p {
+    font-size: 12px;
+    color: #464444;
+    background: #fbfafa;
+    padding: 10px 10px;
+    margin-top: 10px;
+    text-align: left;
+    line-height: 18px;
+    border-radius: 5px;
+    z-index: 999999;
+    clear: both;
+    float: left;
+    width: 97%;
+    border: 1px solid #d8d2d2;
+    font-weight: 600;
+}
+.model_top-bar li .check-in-div span .fa.fa-calendar {
+    position: absolute;
+    right: 10px;
+    top: 34px;
+}
+li.amount {
+    width: 210px;
+    color: #565454;
+    font-weight: 600;
+    font-size: 16px;
+    margin-left: 24px;
+}
+.done-btn {
+    margin-top: 0px !important;
+    margin-bottom: 20px;
+    padding: 5px 0px !important;
+    background: #446073 !important;
+    border-radius: 3px !important;
+    width: 100px;
+    margin-right: 3px;
+    position: absolute;
+    right: 24px;
+    border: 1px solid #446073 !important;
+    bottom: 0;
+}
+    </style>
+</head>
+<body>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+      <div class="modal-content">
+        
+        <div class="modal-body">
+          <ul class="model_top-bar">
+            <li class="top_ul" style="border-bottom: none">
+                <div class="model_top-left">
+                    <span>Select Room</span>
+                </div>
+                <div class="check-in-div">
+                    <span class="for-drop-down">
+                        <title>No of Rooms</title>
+                        <select id="select_rooms_holidays" class="form-control" data-placeholder="Select rooms">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </span>
+                    <span class="for-chek-in">
+                        <title>Check out</title>
+                        <input id="HotelCheckOut_Holidays" type="text" class="form-control clickable input-md" placeholder="dd-mm-yyyy"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                    <span class="for-check-out">
+                        <title>Check in</title>
+                        <input id="HotelCheckIn_Holidays" type="text" class="form-control clickable input-md" placeholder="dd-mm-yyyy"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                </div>
+                <div class="clearfix"></div>
+            </li>
+            <li id="room_list"><b> Room 1 </b>  <ul class="model_list" style="border-bottom: none"><li class="hotel-head"><h3>Standard Studio</h3></li><li class="roomtype"><select class="form-control" id="sharing_types_00" placeholder="Sharing Type" onchange="updateroomprice(12,0,0)"><option value="1">Single</option><option value="2">Double</option><option value="3">Triple</option><option value="5">Double+CWB</option><option value="6">Double+CNB</option><option value="7">Triple+CWB</option><option value="8">Triple+CNB</option></select></li><li class="roomtype"><select class="form-control" id="meal_types_00" placeholder="Meal Type" onchange="updateroomprice(12,0,0)"><option value="1">Bed &amp; Breakfast (BB)</option></select></li><li class="c_policy"><span data-toggle="collapse" data-target="">Show Extra Information</span></li><li class="amount"><large><span id="room_price_00" style="font-size:16px;">$48.64</span></large><button class="sidebar-trigger0" id="sidebar-trigger_00" onclick="add_hotel_rooms_itinerary(11,'Standard Studio',0,0)">Select Room</button></li><p id="demo_00" class="collapse"></p><div class="clearfix"></div></ul><ul class="model_list" style="border-bottom: none"><li class="hotel-head"><h3>Standard Studio - Arab Health</h3></li><li class="roomtype"><select class="form-control" id="sharing_types_01" placeholder="Sharing Type" onchange="updateroomprice(12,0,1)"><option value="1">Single</option><option value="2">Double</option><option value="3">Triple</option><option value="5">Double+CWB</option><option value="6">Double+CNB</option><option value="7">Triple+CWB</option><option value="8">Triple+CNB</option></select></li><li class="roomtype"><select class="form-control" id="meal_types_01" placeholder="Meal Type" onchange="updateroomprice(12,0,1)"><option value="1">Bed &amp; Breakfast (BB)</option></select></li><li class="c_policy"><span data-toggle="collapse" data-target="">Show Extra Information</span></li><li class="amount"><large><span id="room_price_01" style="font-size:16px;">$77.25</span></large><button class="sidebar-trigger0" id="sidebar-trigger_01" onclick="add_hotel_rooms_itinerary(12,'Standard Studio - Arab Health',0,1)">Select Room</button></li><p id="demo_01" class="collapse"></p><div class="clearfix"></div></ul><ul class="model_list" style="border-bottom: none"><li class="hotel-head"><h3>Standard Studio - Gulf Food</h3></li><li class="roomtype"><select class="form-control" id="sharing_types_02" placeholder="Sharing Type" onchange="updateroomprice(12,0,2)"><option value="1">Single</option><option value="2">Double</option><option value="3">Triple</option><option value="5">Double+CWB</option><option value="6">Double+CNB</option><option value="7">Triple+CWB</option><option value="8">Triple+CNB</option></select></li><li class="roomtype"><select class="form-control" id="meal_types_02" placeholder="Meal Type" onchange="updateroomprice(12,0,2)"><option value="1">Bed &amp; Breakfast (BB)</option></select></li><li class="c_policy"><span data-toggle="collapse" data-target="">Show Extra Information</span></li><li class="amount"><large><span id="room_price_02" style="font-size:16px;">$77.25</span></large><button class="sidebar-trigger0" id="sidebar-trigger_02" onclick="add_hotel_rooms_itinerary(13,'Standard Studio - Gulf Food',0,2)">Select Room</button></li><p id="demo_02" class="collapse"></p><div class="clearfix"></div></ul></li>
+            <ul class="model_list" style="border-bottom: none">
+                <li class="amount">
+                    <button type="button" class="sidebar-trigger done-btn" onclick="AddRoomsProceedToItinerary();" id="btnAddToItenerary">Done</button>
+                </li>
+            </ul>
+        </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="bootstrap/js/jquery-3.3.1.min.js"></script>
+  <script src="bootstrap/js/popper.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</body>
+</html>
